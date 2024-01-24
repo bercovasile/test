@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                git 'https://github.com/bercovasile/test.git'
+                git 'repo clone bercovasile/test'
                 sh 'docker build -t my-image:${BUILD_NUMBER} .'
             }
         }
